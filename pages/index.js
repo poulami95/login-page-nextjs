@@ -1,63 +1,38 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Homepage</title>
+        <link rel="icon" href="/images/Logo.png" />
       </Head>
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to My Website
         </h1>
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Hello,I am <b>Poulami</b>. I'm a Software Developer mainly working in Web Development. As a part of my learning i am trying to build a simple login page with basics of <b>Next.js</b>.For this I have borrowed a simple design from <a style={{color:"#224885",fontWeight:"bold"}} target="_blank" href="https://dribbble.com/shots/15392711-Dashboard-Login-Sign-Up">this link</a> and build two simple screens. I have plans to integrate the same login pages with google authentication as a part of my learning. Please visit the links and let me know how it looks 
         </p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+          <Link href="/login/sign-up">
+          <a className="card">
+            <h3>Sign Up &rarr;</h3>
+            <p>Visit this page to sign-up if you are not an user yet.</p>
           </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+          </Link>
+          <Link href="/login/sign-in">
+          <a className="card">
+            <h3>Login &rarr;</h3>
+            <p>Visit this page to login if you already have an account.</p>
           </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          </Link>
         </div>
       </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
 
       <style jsx>{`
         .container {
@@ -67,6 +42,8 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          background-color:#6056f5;
+          color:#fff;
         }
 
         main {
@@ -74,25 +51,6 @@ export default function Home() {
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
           justify-content: center;
           align-items: center;
         }
@@ -122,6 +80,7 @@ export default function Home() {
         .title,
         .description {
           text-align: center;
+          width:70%
         }
 
         .description {
@@ -163,8 +122,8 @@ export default function Home() {
         .card:hover,
         .card:focus,
         .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          color: #224885;
+          border-color: #224885;
         }
 
         .card h3 {
